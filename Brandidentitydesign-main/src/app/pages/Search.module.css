@@ -1,0 +1,169 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  background-color: var(--archive-black);
+  min-height: 100vh;
+  color: var(--dust-ivory);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* Search Header */
+.searchHeader {
+  margin-bottom: 48px;
+  position: relative;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--thread-gold);
+  color: var(--dust-ivory);
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  padding: 16px 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: var(--ash-grey);
+  opacity: 0.6;
+}
+
+.searchInput:focus {
+  border-color: var(--dust-ivory);
+}
+
+/* Layout */
+.searchLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .searchLayout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 25%;
+    position: sticky;
+    top: 112px;
+  }
+}
+
+.filterSection {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  padding-bottom: 20px;
+}
+
+.filterSection:last-child {
+  border: none;
+}
+
+.filterTitle {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--dust-ivory);
+}
+
+.filterOptionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--raw-linen);
+  cursor: pointer;
+  user-select: none;
+}
+
+.optionLabel input {
+  accent-color: var(--thread-gold);
+  cursor: pointer;
+}
+
+/* Results Area */
+.resultsArea {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .resultsArea {
+    width: 75%;
+  }
+}
+
+.resultsCount {
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--ash-grey);
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-cols: 1fr;
+  gap: 40px 24px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-cols: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-cols: repeat(3, 1fr);
+  }
+}
+
+/* No Results State */
+.noResults {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.noResultsTitle {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.noResultsText {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ash-grey);
+  max-w: 400px;
+  margin: 0 auto;
+}

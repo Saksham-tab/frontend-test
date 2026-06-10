@@ -1,0 +1,94 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Brand Colors */
+  --archive-black: #0E0D0B;
+  --aged-parchment: #EDE8DC;
+  --indigo-deep: #1C2B4A;
+  --terracotta: #C4603A;
+  --thread-gold: #BFA46A;
+  --dust-ivory: #F5F0E8;
+  --ash-grey: #6B6860;
+  --raw-linen: #D8CFBF;
+
+  /* Map to UI */
+  --background: var(--archive-black);
+  --foreground: var(--dust-ivory);
+  --card: var(--archive-black);
+  --card-foreground: var(--dust-ivory);
+  --popover: var(--archive-black);
+  --popover-foreground: var(--dust-ivory);
+  --primary: var(--dust-ivory);
+  --primary-foreground: var(--archive-black);
+  --secondary: var(--indigo-deep);
+  --secondary-foreground: var(--dust-ivory);
+  --muted: var(--ash-grey);
+  --muted-foreground: var(--raw-linen);
+  --accent: var(--terracotta);
+  --accent-foreground: var(--archive-black);
+  --border: var(--thread-gold);
+  --input: var(--raw-linen);
+  --ring: var(--thread-gold);
+  
+  --radius: 0px;
+}
+
+@theme inline {
+  --color-archive-black: var(--archive-black);
+  --color-aged-parchment: var(--aged-parchment);
+  --color-indigo-deep: var(--indigo-deep);
+  --color-terracotta: var(--terracotta);
+  --color-thread-gold: var(--thread-gold);
+  --color-dust-ivory: var(--dust-ivory);
+  --color-ash-grey: var(--ash-grey);
+  --color-raw-linen: var(--raw-linen);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+
+  --font-serif-display: "DM Serif Display", serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-body: "Lora", serif;
+  --font-condensed: "Barlow Condensed", sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    border-radius: 0px !important;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}

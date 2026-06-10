@@ -1,0 +1,144 @@
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common Section Layout */
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 500px;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    flex-direction: row;
+    min-height: 650px;
+  }
+}
+
+/* Alternating Columns */
+.sectionA {
+  background-color: var(--terracotta);
+  color: #F7F3EE;
+}
+
+.sectionB {
+  background-color: var(--indigo-deep);
+  color: #F7F3EE;
+}
+
+/* Image Panel (50% on Desktop) */
+.imagePanel {
+  width: 100%;
+  min-height: 350px;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .imagePanel {
+    width: 50%;
+    min-height: auto;
+  }
+}
+
+.imagePanel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content Panel (50% on Desktop) */
+.contentPanel {
+  width: 100%;
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .contentPanel {
+    padding: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentPanel {
+    width: 50%;
+    padding: 100px;
+  }
+}
+
+/* Typography */
+.label {
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.headline {
+  font-family: var(--font-serif-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 768px) {
+  .headline {
+    font-size: 3.2rem;
+  }
+}
+
+.bodyText {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-w: 480px;
+  margin-bottom: 36px;
+}
+
+/* Premium Button Link */
+.editorialBtn {
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #F7F3EE;
+  background: none;
+  border: 1px solid rgba(247, 243, 238, 0.4);
+  padding: 14px 28px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.editorialBtn:hover {
+  border-color: #F7F3EE;
+  background-color: #F7F3EE;
+  color: #1C1C1A;
+}
+
+/* Order Adjustments for Alternating */
+.orderFirst {
+  order: -1;
+}
+
+@media (min-width: 1024px) {
+  .orderFirst {
+    order: 0;
+  }
+}
